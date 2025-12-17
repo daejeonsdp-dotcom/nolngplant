@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전 열병합발전소 증설: 팩트체크 요약 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #e2e8f0; /* Light Slate Background */
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .infographic-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+
+        .section-title {
+            position: relative;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #1e3a8a;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .data-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            transition: transform 0.2s;
+        }
+        
+        /* Custom Styling for the Divider Line and Circles in the Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #06b6d4;
+            z-index: 10;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 0.9rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #bae6fd;
+        }
+        
+        .timeline-item:last-child .timeline-line {
+            height: 0; /* Hide line for the last item */
+        }
+
+        /* High Impact Number Style */
+        .high-impact-number {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 640px) {
+            .infographic-container {
+                margin: 1rem 0.5rem;
+                border-radius: 1rem;
+            }
+            .high-impact-number {
+                font-size: 2.25rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="infographic-container">
+
+        <!-- HEADER SECTION: Title and Core Message -->
+        <header class="bg-slate-900 text-white p-8 md:p-12 text-center rounded-t-xl">
+            <h1 class="text-4xl md:text-5xl font-black text-red-400 mb-2 leading-tight">
+                대전열병합발전소 증설
+            </h1>
+            <h2 class="text-xl md:text-2xl font-bold text-cyan-300">
+                팩트체크: 난방 현대화 vs. 환경 재앙
+            </h2>
+            <p class="mt-4 text-slate-300 max-w-xl mx-auto text-base md:text-lg">
+                '낡은 시설 교체'라는 허울 뒤에 숨겨진 <strong>발전 용량 4배 폭증</strong>과 <br class="hidden sm:inline">
+                <strong>탄소 배출 10배 증가</strong>의 진실을 요약합니다.
+            </p>
+        </header>
+
+        <div class="p-6 md:p-10 space-y-10">
+
+            <!-- SECTION 1: The Core Contradiction - Power vs. Heat -->
+            <section>
+                <h3 class="section-title border-l-4 border-cyan-500 pl-4 mb-6">1. 사업의 본질: 난방은 줄고, 발전 수익만 4배 증가</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Power Increase Card -->
+                    <div class="data-card lg:col-span-2 bg-red-50 border-red-200">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-5xl text-red-600">⚡</span>
+                            <h4 class="text-xl font-bold text-red-700">전기 발전 용량: 4배 폭증</h4>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div class="text-center">
+                                <p class="text-sm text-slate-600 font-medium">기존 (MW)</p>
+                                <p class="high-impact-number text-red-500">113</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-sm text-slate-600 font-medium">증설 후 (MW)</p>
+                                <p class="high-impact-number text-red-800">494</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-xs text-red-700 font-black mb-1">증가율</p>
+                                <p class="text-3xl font-black text-red-700 leading-none">4.4<span class="text-xl">배</span></p>
+                            </div>
+                        </div>
+                        <p class="text-sm mt-3 text-red-600 font-medium">
+                            * 대전 난방을 넘어선 민간 발전 수익 사업임을 증명합니다.
+                        </p>
+                    </div>
+
+                    <!-- Heat Decrease Card -->
+                    <div class="data-card bg-cyan-50 border-cyan-200">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <span class="text-4xl text-cyan-600">📉</span>
+                            <h4 class="text-lg font-bold text-cyan-700">지역 열 공급량: 감소</h4>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-slate-600">367.9 Gcal/h → 303.6 Gcal/h</p>
+                            <p class="text-3xl font-black text-cyan-700 mt-1">17% <span class="text-xl">감소</span></p>
+                        </div>
+                        <p class="text-xs mt-3 text-cyan-600 font-medium text-center">
+                            * "난방 안정화"라는 명분이 허구임을 보여줍니다.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION 2: Environmental Impact - GHG & Carbon Budget -->
+            <section>
+                <h3 class="section-title border-l-4 border-emerald-500 pl-4 mb-6">2. 환경 재앙: 탄소 폭탄으로 도시 목표 잠식</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- GHG Explosion Card -->
+                    <div class="data-card bg-slate-100 border-slate-200">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-5xl text-slate-700">🏭</span>
+                            <h4 class="text-xl font-bold text-slate-800">연간 온실가스 배출량</h4>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-slate-500">기존 (연 18만톤) → <span class="font-bold text-slate-800">증설 후 (연 180만톤)</span></p>
+                            <p class="high-impact-number text-slate-900 mt-2">10<span class="text-2xl">배</span></p>
+                        </div>
+                        <p class="text-sm mt-3 text-red-600 font-bold text-center">
+                            대기 오염 물질 (질소산화물 등) 역시 약 9배 폭증 예상.
+                        </p>
+                    </div>
+
+                    <!-- Carbon Budget Card -->
+                    <div class="data-card bg-emerald-50 border-emerald-200">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-5xl text-emerald-600">🛑</span>
+                            <h4 class="text-xl font-bold text-emerald-700">대전시 탄소 중립 목표 잠식</h4>
+                        </div>
+                        <div class="text-center">
+                             <p class="text-sm text-slate-600">이 발전소 하나가 먹어치우는 감축 목표 비율</p>
+                            <p class="high-impact-number text-emerald-700 mt-2">35.1<span class="text-2xl">%</span></p>
+                        </div>
+                        <p class="text-sm mt-3 text-emerald-600 font-bold text-center">
+                            * 대전시의 2030년 탄소 감축 노력을 무력화합니다.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION 3: Procedural Failure Timeline -->
+            <section>
+                <h3 class="section-title border-l-4 border-orange-500 pl-4 mb-6">3. 절차적 위법성: 주민 배제와 졸속 행정</h3>
+                <div class="relative pt-4">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item pb-8">
+                        <h4 class="font-bold text-lg text-slate-800">2021년 | 형식적인 의견 수렴</h4>
+                        <p class="text-slate-600 text-sm">주민설명회 부실 운영 및 공론화 과정 생략. 시민참여 기본조례 위반.</p>
+                    </div>
+                    
+                    <div class="timeline-item pb-8">
+                        <h4 class="font-bold text-lg text-slate-800">2022년 | 주민 수용성 제고 요청</h4>
+                        <p class="text-slate-600 text-sm">대전시, 산업부에 '주민과 적극 소통 노력' 및 '환경영향평가 공유' 조건 명시.</p>
+                    </div>
+                    
+                    <div class="timeline-item pb-8">
+                        <h4 class="font-bold text-lg text-orange-600">2025년 (현재) | '조건부 찬성' 논란 및 행정소송 예고</h4>
+                        <p class="text-red-600 text-sm font-bold">주민들의 목소리를 듣지 않은 행정 독단으로 감사원 감사 청구 및 허가 취소 소송 진행 중.</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- SECTION 4: Call to Action (CTA) & Alternatives -->
+            <section class="bg-indigo-700 text-white p-8 md:p-10 rounded-2xl text-center">
+                 <h3 class="text-2xl font-black text-yellow-300 mb-4">우리의 요구: 미래를 위한 대안 에너지로!</h3>
+                 <p class="text-indigo-200 mb-6 text-lg">
+                    LNG 증설은 30년 퇴행입니다. 대전의 미래를 위해 무탄소 에너지 전환을 지지해 주세요.
+                 </p>
+                 
+                 <div class="max-w-md mx-auto grid grid-cols-3 gap-3 text-center mb-8">
+                     <div class="text-sm font-medium border-b-2 border-indigo-400 pb-1">💧 수소 연료</div>
+                     <div class="text-sm font-medium border-b-2 border-indigo-400 pb-1">♨️ 심층 지열</div>
+                     <div class="text-sm font-medium border-b-2 border-indigo-400 pb-1">☀️ 분산 에너지</div>
+                 </div>
+
+                <!-- CTA Button (Corrected URL) -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSctSVIVZlIwRXDd46MuNCA3otG8g0qfnHa-YSQ7PS1zVRaIxg/viewform" target="_blank" rel="noopener noreferrer" 
+                   class="inline-block bg-red-500 hover:bg-red-600 text-white font-black text-xl py-4 px-10 rounded-full shadow-2xl shadow-red-700/50 transform transition hover:scale-105 active:scale-95">
+                    📢 증설 반대 서명 동참하기 (클릭)
+                </a>
+                <p class="mt-4 text-indigo-300 text-sm">
+                    여러분의 서명이 대덕구청의 '개발행위 불허가'를 이끌어낼 수 있습니다.
+                </p>
+            </section>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
