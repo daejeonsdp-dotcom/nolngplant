@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전송전탑건설백지화대책위 전단지</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            word-break: keep-all;
+        }
+
+        .a4-container {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            padding: 15mm;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .headline {
+            font-family: 'Black Han Sans', sans-serif;
+            line-height: 1.1;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 320px;
+            background-color: #f8f8f8;
+            margin: 15px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .demand-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #fee2e2;
+            padding-bottom: 1rem;
+        }
+
+        .demand-bullet {
+            background-color: #e11d48;
+            color: white;
+            font-weight: 900;
+            padding: 2px 10px;
+            margin-right: 15px;
+            margin-top: 4px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #e11d48;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        @media print {
+            body { background: none; }
+            .a4-container { margin: 0; box-shadow: none; border: none; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print fixed top-5 right-5 z-50">
+        <button onclick="window.print()" class="bg-rose-600 text-white px-8 py-4 rounded-full shadow-2xl hover:bg-rose-700 font-bold transition-all transform hover:scale-105 flex items-center gap-2">
+            <span>🖨️ PDF 저장 / 인쇄하기</span>
+        </button>
+    </div>
+
+    <!-- PAGE 1 -->
+    <div class="a4-container" id="page1">
+        <header class="text-center mb-6">
+            <p class="text-2xl font-black text-rose-600 mb-2 underline decoration-rose-600 underline-offset-8">지역을 에너지식민지로 전락시키는</p>
+            <h1 class="headline text-5xl text-gray-900 mb-3">송전탑 건설 전면 재검토 하고</h1>
+            <h1 class="headline text-4xl text-rose-600">폭탄돌리기식 입지선정위원회 추진 중단하라!</h1>
+        </header>
+
+        <div class="image-placeholder" id="img-container-1">
+            <div class="loader"></div>
+        </div>
+
+        <section class="mt-8">
+            <h2 class="text-2xl font-black bg-gray-900 text-white inline-block px-4 py-1 mb-4">신계룡-북천안 345kV 송전선로 건설 계획의 실체</h2>
+            <div class="space-y-4 text-xl text-gray-800 leading-relaxed font-medium">
+                <p>• 정부는 무려 총 길이 3,855km에 달하는 99개의 송변전선로를 건설하는 사업을 졸속으로 지정했습니다. 이 초고압 송전선은 전국을 가로질러 전력 다소비 첨단 산업인 <strong>용인 반도체 국가산단</strong>으로 향하게 됩니다.</p>
+                <p>• 이는 지역과 주민들을 희생시켜 <strong>'에너지 식민지'</strong>로 전락시키는 망국적인 수도권 집중 난개발 사업의 정점입니다.</p>
+            </div>
+
+            <div class="bg-rose-50 border-l-8 border-rose-600 p-6 mt-8">
+                <p class="text-2xl leading-relaxed text-gray-900 font-bold">
+                    대전 <strong>서구 2개동, 유성구 5개동</strong>을 관통하는 신계룡-북천안 345KV 노선 계획, 대전 시민은 더 이상 희생양이 될 수 없습니다!
+                </p>
+            </div>
+
+            <div class="mt-8 border-4 border-rose-600 p-8 text-center rounded-2xl bg-white shadow-inner">
+                <h3 class="text-3xl font-black text-rose-600 mb-4">누구를 위한 송전탑입니까?</h3>
+                <p class="text-2xl font-bold text-gray-800 leading-snug">
+                    대기업의 이윤을 위해 시민의 <span class="text-rose-600">건강권</span>을 팔지 마십시오!<br>
+                    전자파와 자연 파괴, 재산권 침해를 강요하는<br>
+                    <span class="bg-yellow-200 px-1 text-gray-900 font-black">국가 폭력적 송전탑 건설</span>에 결사 반대합니다!
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="a4-container" id="page2">
+        <header class="mb-8 border-b-8 border-rose-600 pb-4">
+            <h1 class="headline text-6xl text-gray-900">우리의 정당한 요구</h1>
+        </header>
+
+        <section class="mt-10">
+            <div class="space-y-2">
+                <!-- 요구사항 1 -->
+                <div class="demand-item">
+                    <span class="demand-bullet">1</span>
+                    <p class="text-2xl font-black text-gray-900 leading-tight">정부는 용인 반도체 국가산단계획 전면 재검토 하라!</p>
+                </div>
+                <!-- 요구사항 2 -->
+                <div class="demand-item">
+                    <span class="demand-bullet">2</span>
+                    <p class="text-2xl font-black text-gray-900 leading-tight">신계룡 ~ 북천안 송전선로 설치 계획 전면 중단하고 백지화 하라!</p>
+                </div>
+                <!-- 요구사항 3 -->
+                <div class="demand-item">
+                    <span class="demand-bullet">3</span>
+                    <p class="text-2xl font-black text-gray-900 leading-tight">정부는 수도권 전력수요 분산 및 송전선로 건설 최소화를 위한 전력수급기본계획 마련하라!</p>
+                </div>
+                <!-- 요구사항 4 -->
+                <div class="demand-item">
+                    <span class="demand-bullet">4</span>
+                    <p class="text-2xl font-black text-gray-900 leading-tight">전력망 불평등 해소와 송전선로 갈등해결을 위한 제도 마련에 나서라!</p>
+                </div>
+                <!-- 요구사항 5 -->
+                <div class="demand-item border-none">
+                    <span class="demand-bullet">5</span>
+                    <p class="text-2xl font-black text-rose-600 leading-tight">대전시와 서구, 유성구는 정부의 송전탑 건설에 대한 반대입장과 폭탄돌리기식 입지선정위원회 추진 반대 입장 표명하라!</p>
+                </div>
+            </div>
+
+            <div class="image-placeholder mt-8" id="img-container-2">
+                <div class="loader"></div>
+            </div>
+
+            <div class="mt-10 bg-gray-900 p-8 rounded-2xl text-white shadow-xl">
+                <h4 class="text-2xl font-black mb-3 border-b border-gray-700 pb-2 text-yellow-400">입지선정위원회라는 기만술책</h4>
+                <p class="text-xl opacity-95 leading-relaxed">
+                    지자체 추천이라는 이름으로 주민을 들러리 세워 '다수결'의 명목으로 국책 사업의 면죄부를 주는 행위입니다. 주민 기만 기구 구성을 즉각 철회하십시오!
+                </p>
+            </div>
+
+            <footer class="mt-16 text-center border-t-4 border-gray-900 pt-10">
+                <p class="text-5xl font-black tracking-tighter text-gray-900 mb-3">대전송전탑건설백지화대책위</p>
+                <p class="text-2xl text-gray-600 font-black italic">"생존권을 위협하는 일방적인 송전탑 건설을 반드시 막아내겠습니다!"</p>
+            </footer>
+        </section>
+    </div>
+
+    <script>
+        const apiKey = ""; 
+
+        async function loadImages() {
+            const configs = [
+                {
+                    containerId: "img-container-1",
+                    prompt: "A dramatic wide shot of a giant industrial electric transmission tower standing ominously over a beautiful green mountain landscape with a city in the distance, dark clouds gathering, 4k high definition photography."
+                },
+                {
+                    containerId: "img-container-2",
+                    prompt: "A strong graphic illustration of people standing together in solidarity, holding protest banners with a silhouette of power lines in the background, bold colors like red, black and white, high impact poster style."
+                }
+            ];
+
+            for (const config of configs) {
+                try {
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            instances: [{ prompt: config.prompt }],
+                            parameters: { sampleCount: 1 }
+                        })
+                    });
+
+                    const data = await response.json();
+                    if (data.predictions && data.predictions[0].bytesBase64Encoded) {
+                        const base64 = data.predictions[0].bytesBase64Encoded;
+                        document.getElementById(config.containerId).innerHTML = `<img src="data:image/png;base64,${base64}" alt="캠페인 이미지">`;
+                    }
+                } catch (err) {
+                    console.error("Image generation failed", err);
+                    document.getElementById(config.containerId).innerHTML = `<div class="p-10 text-gray-400">이미지를 불러올 수 없습니다.</div>`;
+                }
+            }
+        }
+
+        window.onload = loadImages;
+    </script>
+</body>
+</html>
