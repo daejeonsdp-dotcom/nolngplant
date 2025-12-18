@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전 송전선로 건설 반대 - 강조 문구 수정 버전</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+        :root {
+            --primary-red: #C62828;
+            --main-black: #111111;
+            --neutral-gray: #F8F8F8;
+            --border-heavy: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            background: #d1d1d1;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: var(--main-black);
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: #fff;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 10mm 15mm 10mm 15mm;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        @media print {
+            body { background: none; }
+            .page { margin: 0; box-shadow: none; page-break-after: always; }
+            .no-print { display: none; }
+        }
+
+        .header-top {
+            text-align: center;
+            border-bottom: 6px solid var(--border-heavy);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .header-top h3 {
+            font-size: 18pt;
+            font-weight: 800;
+            color: var(--primary-red);
+            letter-spacing: -0.5px;
+            margin-bottom: 3px;
+        }
+
+        .main-headline {
+            font-size: 38pt;
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 5px 0;
+            letter-spacing: -2px;
+            word-break: keep-all;
+        }
+
+        .sub-headline {
+            font-size: 21pt;
+            font-weight: 900;
+            color: #fff;
+            background: var(--main-black);
+            display: inline-block;
+            padding: 6px 22px;
+            margin-top: 5px;
+            letter-spacing: -1px;
+        }
+
+        .content-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-title {
+            font-size: 18pt;
+            font-weight: 900;
+            border-left: 12px solid var(--primary-red);
+            padding-left: 15px;
+            margin: 15px 0 10px 0;
+            background: var(--neutral-gray);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .text-block {
+            font-size: 14pt;
+            text-align: justify;
+            word-break: keep-all;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 14pt;
+            line-height: 1.6;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-weight: 900;
+            font-size: 18pt;
+            line-height: 1;
+        }
+
+        .emphasis-box {
+            border: 5px solid var(--main-black);
+            padding: 15px 20px;
+            margin: 10px 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .emphasis-box strong {
+            font-size: 23pt;
+            color: var(--primary-red);
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: -1px;
+        }
+
+        .highlight-text {
+            background: linear-gradient(transparent 70%, #ffeb3b 70%);
+            /* 볼드 해제: font-weight를 기본값이나 500 정도로 설정 */
+            font-weight: 500;
+        }
+
+        footer {
+            border-top: 4px solid var(--border-heavy);
+            padding-top: 8px;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background: white;
+        }
+
+        .org-info {
+            font-size: 22pt;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .contact-details {
+            text-align: right;
+            font-size: 15pt;
+            font-weight: 700;
+        }
+
+        .no-print-bar {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .print-btn {
+            padding: 10px 40px;
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            font-weight: 900;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .demand-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        .demand-mark {
+            background: var(--primary-red);
+            color: white;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 11pt;
+        }
+        .demand-text {
+            font-size: 13pt;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-bar no-print">
+        <button class="print-btn" onclick="window.print()">인쇄 및 PDF 저장</button>
+    </div>
+
+    <!-- PAGE 1 (전면) -->
+    <div class="page">
+        <header class="header-top">
+            <h3>지역을 에너지식민지로 전락시키는</h3>
+            <h1 class="main-headline">송전탑 건설 전면 재검토 하고</h1>
+            <div class="sub-headline">폭탄돌리기식 입지선정위원회 추진 중단하라!</div>
+        </header>
+
+        <main class="content-body">
+            <div class="section-title">신계룡-북천안 345kV 송전선로 건설 계획은?</div>
+            <ul class="bullet-list">
+                <li>정부는 무려 총 길이 3,855km에 달하는 99개의 송변전선로를 건설하는 사업을 졸속으로 지정했습니다. 이 초고압 송전선은 전국을 가로질러 전력 다소비 첨단 산업인 용인 반도체 국가산단으로 향하게 됩니다. 이는 지역과 주민들을 희생시켜 '에너지 식민지'로 전락시키는 망국적인 수도권 집중 난개발 사업의 정점입니다.</li>
+            </ul>
+
+            <div class="text-block" style="margin-top: 5px;">
+                국토의 허리인 대전에도 상당히 많은 송전선로가 지나가는 것으로 계획되어 있으며 그 중 신계룡-북천안 345KV노선은 <span style="font-weight:900; background: linear-gradient(transparent 70%, #ffeb3b 70%);">서구2개동, 유성구5개동</span>이 송전선로가 지나가는 지역으로 결정되었습니다.
+            </div>
+
+            <div class="emphasis-box">
+                <strong>하지만 현 송전선로 계획은 대전시민에게<br>결코 이로울 것이 없습니다.</strong>
+                <p style="font-size: 16pt; line-height: 1.55; font-weight: 400; letter-spacing: -0.5px;">
+                    <span class="highlight-text">삼성과 SK등 대기업</span>이 이윤을 축적하는 산업을 위해<br>
+                    대전시민들은 <span class="highlight-text">미세먼지와 전자파를 감내해야 하고</span><br>
+                    지역 자연경관 훼손, 재산권 침해, 공동체 파괴의<br>
+                    고통까지 떠안게 됩니다.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: auto; padding-bottom: 5px;">
+                <p style="font-size: 24pt; font-weight: 900; color: var(--primary-red);">"누구를 위한 희생입니까?"</p>
+                <p style="font-size: 17pt; font-weight: 500; margin-top: 5px;">우리의 삶의 터전을 파괴하는 일방적 건설을 중단하십시오!</p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="org-info">대전송전탑건설백지화대책위</div>
+            <div class="contact-details">
+                <p>전화 042-331-3700</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PAGE 2 (후면) -->
+    <div class="page">
+        <header class="header-top">
+            <h1 class="main-headline" style="font-size: 32pt;">기만적인 입지선정위원회,<br>우리는 거부한다!</h1>
+        </header>
+
+        <main class="content-body">
+            <div class="section-title" style="margin-top: 5px;">입지선정위원회는?</div>
+            <ul class="bullet-list">
+                <li>지자체에서 각동별로 대표를 추천받아서 특별한 절차없이 승인된 사람들로 구성되어져서 일종의 다수결로 지역을 선정하는 구조입니다.</li>
+                <li>이는 일종의 선호도 조사라는 형식을 빌어 지역간의 갈등, 주민간의 갈등을 유발하는 아주 비민주적이고 폭력적인 기만책에 불과합니다.</li>
+                <li>대전지역에서는 총 86명의 위원들이 활동을 한 바 있으나 대다수 시민들은 위원이 누구인지조차 모르는 가운데 대전의 운명이 결정되고 있습니다.</li>
+            </ul>
+
+            <div class="emphasis-box" style="background: var(--neutral-gray); border-style: dashed; margin: 10px 0; padding: 15px;">
+                <p style="font-size: 15pt; font-weight: 900; line-height: 1.4;">
+                    수도권 대기업에 전력을 공급하기 위해<br>
+                    <span style="color: var(--primary-red);">대전시민의 건강권과 환경권은 희생되어도 좋다는 말입니까?</span>
+                </p>
+            </div>
+
+            <div class="section-title" style="margin-top: 15px;">우리의 정당한 요구</div>
+            
+            <div class="demand-item"><div class="demand-mark">1</div><div class="demand-text">정부는 용인 반도체 국가산단 계획 전면 재검토 하고 신계룡~북천안 송전선로 설치 계획 즉각 백지화 하라!</div></div>
+            <div class="demand-item"><div class="demand-mark">2</div><div class="demand-text">수도권 전력공급만을 위한 기만적인 전력수급기본계획 수정하고 근본적인 대책을 마련하라!</div></div>
+            <div class="demand-item"><div class="demand-mark">3</div><div class="demand-text">수도권 전력 수요 관리를 우선하는 기만적인 전력수급기본계획을 전면 수정하라!</div></div>
+            <div class="demand-item"><div class="demand-mark">4</div><div class="demand-text">대전시와 구청 등 자치단체는 송전탑 건설 반대에 대한 공식 입장을 명확히 표명하라!</div></div>
+            <div class="demand-item"><div class="demand-mark">5</div><div class="demand-text">전력망 불평등 해소와 송전선로 갈등 해결을 위한 에너지 정의를 실현하라!</div></div>
+
+            <div style="margin-top: 10px; text-align: center; background: #000; color: #fff; padding: 12px; border-radius: 4px;">
+                <p style="font-size: 13pt; font-weight: 900;">결론을 정해놓고 진행하는 주민설명회는 무효입니다!</p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="org-info">대전환경운동연합</div>
+            <div class="contact-details">
+                <p>문의 010-4192-0350</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
