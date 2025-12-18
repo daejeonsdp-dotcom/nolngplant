@@ -3,192 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대전 송전탑 건설 백지화 캠페인 포스터</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>기후 정의 캠페인 리플렛</title>
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f3f4f6; }
-        .a4-page {
+        /* 폰트 설정: Pretendard 또는 기본 고딕체 */
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        :root {
+            --main-bg: #000000;
+            --point-color: #ccff00; /* 형광 노랑 */
+            --sub-text: #ffffff;
+            --gray-text: #888888;
+            --card-bg: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Pretendard', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        /* A4 규격 설정 (210mm x 297mm) */
+        .page {
             width: 210mm;
             height: 297mm;
-            padding: 15mm;
-            margin: 20px auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: var(--main-bg);
+            color: var(--sub-text);
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
         }
-        .warning-stripe {
-            height: 12px;
-            background: repeating-linear-gradient(-45deg, #facc15, #facc15 10px, #000 10px, #000 20px);
-        }
-        .impact-text { letter-spacing: -0.05em; line-height: 1.1; }
+
+        /* 인쇄 최적화 */
         @media print {
-            body { background: none; padding: 0; }
-            .a4-page { margin: 0; box-shadow: none; border: none; }
-            .no-print { display: none; }
+            body { padding: 0; background: none; }
+            .page { margin: 0; box-shadow: none; page-break-after: always; }
+            @page { size: A4; margin: 0; }
+        }
+
+        /* 앞면 디자인 */
+        #front-page {
+            padding: 20mm;
+            justify-content: center;
+            text-align: center;
+            border: 8px solid var(--point-color);
+            margin: 0; /* 인쇄 시 마진 제거 */
+        }
+
+        .category-tag {
+            font-size: 18pt;
+            font-weight: 800;
+            color: var(--point-color);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .main-headline {
+            font-size: 72pt;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 40px;
+            word-break: keep-all;
+        }
+
+        .highlight {
+            color: var(--point-color);
+        }
+
+        .main-illustration {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .main-illustration svg {
+            width: 180px;
+            fill: var(--point-color);
+        }
+
+        .sub-message {
+            font-size: 20pt;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--sub-text);
+        }
+
+        .bottom-logo {
+            position: absolute;
+            bottom: 20mm;
+            left: 0;
+            right: 0;
+            font-size: 16pt;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* 뒷면 디자인 */
+        #back-page {
+            padding: 20mm;
+            text-align: left;
+        }
+
+        .section-header {
+            border-left: 10px solid var(--point-color);
+            padding-left: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 36pt;
+            font-weight: 900;
+            color: var(--point-color);
+        }
+
+        .data-visual {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .data-visual h3 {
+            font-size: 18pt;
+            margin-bottom: 15px;
+            color: var(--sub-text);
+        }
+
+        .bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .bar-label { width: 80px; font-size: 14pt; }
+        .bar { height: 25px; background-color: var(--point-color); }
+        .bar-value { margin-left: 15px; font-weight: 700; color: var(--point-color); }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .policy-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .num {
+            font-size: 28pt;
+            font-weight: 900;
+            color: var(--point-color);
+            line-height: 1;
+        }
+
+        .policy-content h4 {
+            font-size: 16pt;
+            margin-bottom: 8px;
+            color: var(--point-color);
+        }
+
+        .policy-content p {
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .call-to-action {
+            margin-top: auto;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .qr-placeholder {
+            width: 100px;
+            height: 100px;
+            background-color: var(--point-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: 900;
+            font-size: 10pt;
+            text-align: center;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        .contact-info p {
+            font-size: 10pt;
+            color: var(--gray-text);
+            margin-bottom: 4px;
         }
     </style>
 </head>
-<body class="py-10">
+<body>
 
-    <!-- [PAGE 1: FRONT] -->
-    <div class="a4-page" id="page-front">
-        <div class="warning-stripe absolute top-0 left-0 w-full"></div>
+    <!-- 앞면 (Impact Page) -->
+    <div id="front-page" class="page">
+        <div class="category-tag">CLIMATE JUSTICE</div>
+        <h1 class="main-headline">
+            당신의 전기는<br>
+            <span class="highlight">어디서</span> 오는가?
+        </h1>
         
-        <div class="mt-8 flex justify-between items-start">
-            <div class="bg-black text-white px-4 py-1 text-sm font-bold tracking-widest">긴급 행동 포스터</div>
-            <div class="text-right">
-                <p class="text-red-600 font-black text-xl">STOP 345kV</p>
-                <p class="text-xs text-gray-500 italic uppercase">Emergency Campaign 2024</p>
+        <div class="main-illustration">
+            <!-- 송전탑 아이콘 SVG -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L4 22H6L7.5 18.25H16.5L18 22H20L12 2ZM12 5.5L15.4 14H8.6L12 5.5ZM7.9 16.25H16.1L16.5 17.25H7.5L7.9 16.25Z"/>
+            </svg>
+        </div>
+
+        <p class="sub-message">
+            지방의 희생으로 밝혀지는 수도권의 불빛.<br>
+            우리는 이 <strong>'약탈적 에너지 구조'</strong>를<br>
+            거부합니다.
+        </p>
+
+        <div class="bottom-logo">사회민주당 미래정책실</div>
+    </div>
+
+    <!-- 뒷면 (Information Page) -->
+    <div id="back-page" class="page">
+        <div class="section-header">
+            <div class="category-tag" style="margin-bottom: 5px; font-size: 12pt;">REPORT</div>
+            <h2>기후 불평등의 실태</h2>
+        </div>
+
+        <div class="data-visual">
+            <h3>지역별 전력 자립률 불균형</h3>
+            <div class="bar-container">
+                <div class="bar-label">충남</div>
+                <div class="bar" style="width: 70%;"></div>
+                <div class="bar-value">210.0%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-label">서울</div>
+                <div class="bar" style="width: 4%;"></div>
+                <div class="bar-value">8.9%</div>
+            </div>
+            <p style="font-size: 10pt; color: var(--gray-text); margin-top: 10px;">* 2024 KEPCO 통계 기반 추정치</p>
+        </div>
+
+        <div class="policy-grid">
+            <div class="policy-item">
+                <div class="num">01</div>
+                <div class="policy-content">
+                    <h4>지역 에너지 주권 확립</h4>
+                    <p>초대규모 중앙집중식 발전 대신, 전력 소비 지역 내 재생에너지 발전 및 ESS 결합 의무화를 추진합니다.</p>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="num">02</div>
+                <div class="policy-content">
+                    <h4>전력 수요 총량 관리</h4>
+                    <p>수도권 전력 과소비 시설(데이터센터 등)에 대한 총량제를 실시하고, 생산 시설 인근으로 기업 이전을 유도합니다.</p>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="num">03</div>
+                <div class="policy-content">
+                    <h4>차등 전기요금제 도입</h4>
+                    <p>송전 비용을 전력 소비자가 부담하게 하여, 생산지-소비지 간 불균형에 따른 '외부 비용'을 내부화합니다.</p>
+                </div>
             </div>
         </div>
 
-        <header class="mt-12">
-            <h2 class="text-3xl font-bold text-gray-800 impact-text mb-4">지역을 <span class="text-red-600">에너지 식민지</span>로 전락시키는</h2>
-            <h1 class="text-[64px] font-[900] text-black impact-text mb-6">
-                송전탑 건설<br><span class="text-red-600 underline decoration-8 underline-offset-8">전면 재검토하라!</span>
-            </h1>
-            <div class="bg-yellow-400 p-4 inline-block transform -rotate-1">
-                <p class="text-2xl font-black text-black tracking-tighter">폭탄돌리기식 입지선정위원회 추진 중단!</p>
+        <p style="margin-top: 40px; font-size: 14pt; color: var(--point-color); font-weight: 700; line-height: 1.5;">
+            "송전탑은 대전을 관통할 수 없습니다.<br>백지화만이 정의입니다."
+        </p>
+
+        <div class="call-to-action">
+            <div class="qr-placeholder">정책 보고서<br>전문 보기</div>
+            <div class="contact-info">
+                <p>사회민주당 대전광역시당</p>
+                <p>대전송전탑건설백지화대책위 연대</p>
+                <p>문의: 02-XXX-XXXX | www.socialdemocrats.kr</p>
             </div>
-        </header>
-
-        <main class="mt-12 flex-grow">
-            <div class="grid grid-cols-2 gap-8">
-                <!-- Visual Section -->
-                <div class="relative flex items-center justify-center">
-                    <!-- SVG Icon Style: Lucide-React Power/Tower -->
-                    <svg viewBox="0 0 24 24" class="w-full h-auto text-gray-200 absolute opacity-30" fill="none" stroke="currentColor" stroke-width="0.5">
-                        <path d="M18.5 2L12 8L5.5 2M12 8V22M12 8L18 14M12 8L6 14M4.5 22H19.5" />
-                    </svg>
-                    <div class="z-10 space-y-4">
-                        <div class="bg-red-600 text-white p-6 rounded-2xl shadow-xl">
-                            <h3 class="text-xl font-bold mb-2">신계룡-북천안 노선</h3>
-                            <p class="text-4xl font-black">대전 서구·유성구<br>직격탄!</p>
-                        </div>
-                        <div class="border-4 border-black p-4 bg-white">
-                            <p class="font-bold text-gray-700">삼성·SK 대기업 이윤 위해<br>대전 시민이 희생해야 합니까?</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Info Section -->
-                <div class="space-y-6">
-                    <div class="border-l-4 border-red-600 pl-4">
-                        <h4 class="font-black text-lg text-red-600">무엇을 위한 송전선로인가?</h4>
-                        <p class="text-gray-700 leading-tight mt-1 font-medium">졸속 지정된 99개 송변전선로,<br>그 끝은 '수도권 용인 반도체 산단'입니다.</p>
-                    </div>
-                    
-                    <div class="bg-gray-100 p-5 rounded-lg space-y-2">
-                        <p class="flex items-center gap-2 text-sm font-bold text-gray-600">
-                            <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
-                            초고압 전자파 및 미세먼지 감내
-                        </p>
-                        <p class="flex items-center gap-2 text-sm font-bold text-gray-600">
-                            <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
-                            자연경관 훼손 및 재산권 침해
-                        </p>
-                        <p class="flex items-center gap-2 text-sm font-bold text-gray-600">
-                            <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
-                            지역 공동체 파괴의 고통
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <footer class="mt-8 border-t-4 border-black pt-6 pb-2">
-            <div class="flex justify-between items-end">
-                <div>
-                    <h3 class="text-2xl font-black text-black">대전송전탑건설백지화대책위</h3>
-                    <p class="text-sm font-bold text-gray-600">대전환경운동연합</p>
-                </div>
-                <div class="text-right font-black text-red-600">
-                    <p class="text-lg leading-tight">참여문의: 042-331-3700</p>
-                    <p class="text-xl">H.P: 010-4192-0350</p>
-                </div>
-            </div>
-        </footer>
-        <div class="warning-stripe absolute bottom-0 left-0 w-full"></div>
-    </div>
-
-    <!-- [PAGE 2: BACK] -->
-    <div class="a4-page" id="page-back">
-        <header class="bg-black text-white p-6 -mx-[15mm] -mt-[15mm] mb-10">
-            <h2 class="text-2xl font-black tracking-tighter">진실을 알면 침묵할 수 없습니다</h2>
-            <p class="text-yellow-400 font-bold">입지선정위원회의 비민주적 실태를 폭로합니다</p>
-        </header>
-
-        <section class="space-y-8">
-            <div>
-                <h3 class="flex items-center gap-2 text-xl font-black text-black mb-4">
-                    <span class="bg-red-600 text-white w-8 h-8 flex items-center justify-center rounded-full text-sm">?</span>
-                    입지선정위원회, 무엇이 문제인가?
-                </h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-red-50 p-4 border border-red-100 rounded">
-                        <h4 class="font-bold text-red-700 mb-2">비민주적 선정 방식</h4>
-                        <p class="text-sm text-gray-700 leading-snug">대표성 없는 인원들로 구성되어 다수결로 밀어붙이는 방식입니다. 지자체·주민 간 갈등을 조장하는 폭력적 기만책입니다.</p>
-                    </div>
-                    <div class="bg-red-50 p-4 border border-red-100 rounded">
-                        <h4 class="font-bold text-red-700 mb-2">불투명한 운영</h4>
-                        <p class="text-sm text-gray-700 leading-snug">대전 86명의 위원들이 어떤 기준으로 선정되었고 어떤 의견을 취합했는지 시민들은 전혀 모릅니다.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-900 text-white p-8 rounded-3xl">
-                <h3 class="text-3xl font-black mb-6 text-center text-red-500">우리의 정당한 요구</h3>
-                <ul class="space-y-4 font-bold text-lg">
-                    <li class="flex items-start gap-3">
-                        <span class="text-yellow-400">01.</span>
-                        <span>정부는 용인 반도체 국가산단 계획을 전면 재검토하라!</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-yellow-400">02.</span>
-                        <span>신계룡-북천안 송전선로 설치 계획을 즉각 백지화하라!</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-yellow-400">03.</span>
-                        <span>수도권 전력수요 분산을 위한 전력수급기본계획을 마련하라!</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-yellow-400">04.</span>
-                        <span>송전선로 갈등 해결을 위한 근본적인 제도를 마련하라!</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-yellow-400">05.</span>
-                        <span>대전시는 송전탑 건설 및 기만적 위원회에 대해 공식 반대하라!</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-center py-8">
-                <p class="text-xl font-bold text-gray-800">우리의 건강권과 환경권은 타협의 대상이 아닙니다!</p>
-                <div class="mt-4 flex justify-center gap-10">
-                    <div class="text-center">
-                        <p class="text-xs text-gray-500 font-bold mb-1">참여 연락처</p>
-                        <p class="text-2xl font-black text-black">042-331-3700</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-xs text-gray-500 font-bold mb-1">사무처장 직통</p>
-                        <p class="text-2xl font-black text-red-600">010-4192-0350</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="mt-auto bg-gray-100 p-6 -mx-[15mm] -mb-[15mm] flex justify-between items-center">
-            <p class="text-gray-600 font-bold">대전환경운동연합 | 대전송전탑건설백지화대책위</p>
-            <div class="flex gap-2">
-                <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white text-[10px] font-bold">건강</div>
-                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-[10px] font-bold">환경</div>
-                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white text-[10px] font-bold">권리</div>
-            </div>
-        </footer>
+        </div>
     </div>
 
 </body>
